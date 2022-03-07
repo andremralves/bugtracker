@@ -1,4 +1,4 @@
-package com.project.bugtracker.controllers;
+package com.project.bugtracker.bug;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

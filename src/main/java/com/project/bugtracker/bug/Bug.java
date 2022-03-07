@@ -1,4 +1,4 @@
-package com.project.bugtracker.models;
+package com.project.bugtracker.bug;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
