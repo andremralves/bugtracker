@@ -1,7 +1,6 @@
 package com.project.bugtracker.models;
 
-import java.util.Objects;
-
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,17 +22,19 @@ public class Bug {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String name;
+    @Column(name = "title")
+    private String title;
+
+    @Column(name = "published")
     private String reporter;
 
     public Bug(String n, String r) {
-        this.name = n;
+        this.title = n;
         this.reporter = r;
     }
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
-        return super.toString();
+        return "Bug: " + this.title + ", " + this.reporter;
     }
 }
