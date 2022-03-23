@@ -6,15 +6,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@Getter
-@Setter
-@EqualsAndHashCode
-@NoArgsConstructor
 @Entity
 public class Bug {
 
@@ -25,12 +16,30 @@ public class Bug {
     @Column(name = "title")
     private String title;
 
-    @Column(name = "published")
+    @Column(name = "reporter")
     private String reporter;
+
+    public Bug() {}
 
     public Bug(String n, String r) {
         this.title = n;
         this.reporter = r;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getReporter() {
+        return reporter;
+    }
+
+    public void setReporter(String reporter) {
+        this.reporter = reporter;
     }
 
     @Override
